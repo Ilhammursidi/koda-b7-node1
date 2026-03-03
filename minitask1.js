@@ -18,6 +18,4 @@ export async function inputDate() {
 		return;
 	}
 	rl.close();
-}
-
-
+};
