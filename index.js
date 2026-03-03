@@ -5,5 +5,3 @@ import {dateConvert} from "./minitask2.js";
 console.log(dateConvert("19-09-1999"));
 
 inputDate();
-// minitask 2
-// inputDate();
