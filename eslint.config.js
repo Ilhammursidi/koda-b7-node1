@@ -1,0 +1,25 @@
+import js from "@eslint/js";
+import globals from "globals";
+import { defineConfig } from "eslint/config";
+import stylistic from "@stylistic/eslint-plugin";
+
+export default defineConfig([
+	{ 
+		files : ["**/*.js"], 
+		plugins : {
+			js,
+			"@stylistic" : stylistic},
+		languageOptions : { globals : globals.node },
+		rules : {
+			"prefer-const" : "warn",
+			eqeqeq : "error",
+			"@stylistic/semi" : ["error", "always"],
+
+			"@stylistic/comma-style" : ["error", "last"],
+			"@stylistic/function-call-spacing" : ["error", "never"],
+			"@stylistic/indent" : ["error","tab"],
+			"@stylistic/key-spacing" : ["error", { "beforeColon" : true }],
+			"@stylistic/no-multi-spaces" : ["error"]
+		},
+	},
+]);
